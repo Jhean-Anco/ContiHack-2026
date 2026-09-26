@@ -21,3 +21,6 @@ apps/backend/generated/
 Thumbs.db
 .vscode/
 .idea/
+
+# Salida de la prueba de humo del frontend
+apps/frontend/.humo-build/

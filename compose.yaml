@@ -28,6 +28,9 @@ services:
       PORT: 3001
       DATABASE_URL: ${DATABASE_URL:?Configura DATABASE_URL en .env}
       FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      AI_PROVIDER: ${AI_PROVIDER:-mock}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.1-flash-lite}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
     ports:
       - "${API_PORT:-3001}:3001"
     volumes:
@@ -53,6 +56,7 @@ services:
     environment:
       NODE_ENV: development
       NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:3001}
+      NEXT_PUBLIC_CONTENIDO_ORIGEN: http
       WATCHPACK_POLLING: "true"
     ports:
       - "3000:3000"

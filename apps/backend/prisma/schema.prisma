@@ -6,3 +6,14 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model AiBudgetLedger {
+  id          Int      @id @default(1)
+  budgetUsd   Decimal  @default(5.00000000) @db.Decimal(12, 8)
+  spentUsd    Decimal  @default(0) @db.Decimal(12, 8)
+  reservedUsd Decimal  @default(0) @db.Decimal(12, 8)
+  requests    Int      @default(0)
+  inputTokens BigInt   @default(0)
+  outputTokens BigInt  @default(0)
+  updatedAt   DateTime @updatedAt
+}

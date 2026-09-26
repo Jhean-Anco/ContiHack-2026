@@ -1,0 +1,96 @@
+/*
+ * Tokens visuales de ContiHack 2026.
+ * Definidos como variables CSS y expuestos a Tailwind desde globals.css.
+ * Criterios: contraste verificable, señal no cromática en cada estado,
+ * escala de espaciado consistente y movimiento reducible.
+ * Los valores son la primera propuesta del prototipo, no una identidad aprobada.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Superficies y texto */
+  --ch-lienzo: #f4f1ea;
+  --ch-superficie: #ffffff;
+  --ch-superficie-alt: #ebe6db;
+  --ch-tinta: #1a1917;
+  --ch-tinta-suave: #54504a;
+  --ch-borde: #cec6b7;
+  --ch-borde-fuerte: #8a8275;
+
+  /* Acción */
+  --ch-accion: #17503f;
+  --ch-accion-hover: #0f3b2e;
+  --ch-accion-tinta: #ffffff;
+  --ch-accion-suave: #e2efe9;
+
+  /* Estados */
+  --ch-exito: #16653c;
+  --ch-exito-fondo: #e6f4ea;
+  --ch-aviso: #8a5a06;
+  --ch-aviso-fondo: #fbf1d9;
+  --ch-error: #a8231c;
+  --ch-error-fondo: #fbeae8;
+  --ch-info: #1c4ed8;
+  --ch-info-fondo: #e8eeff;
+
+  /* Foco */
+  --ch-foco: #1c4ed8;
+  --ch-foco-contorno: #ffffff;
+
+  /* Tipografía */
+  --ch-fuente-texto: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --ch-fuente-fuente-historica: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+  --ch-texto-xs: 0.8125rem;
+  --ch-texto-sm: 0.9375rem;
+  --ch-texto-base: 1.0625rem;
+  --ch-texto-lg: 1.1875rem;
+  --ch-texto-xl: 1.4375rem;
+  --ch-texto-2xl: 1.75rem;
+  --ch-texto-3xl: 2.125rem;
+  --ch-linea-lectura: 1.65;
+  --ch-ancho-lectura: 68ch;
+
+  /* Forma y espaciado */
+  --ch-radio-sm: 0.5rem;
+  --ch-radio-md: 0.875rem;
+  --ch-radio-lg: 1.25rem;
+  --ch-blanco-tactil: 2.75rem;
+  --ch-sombra-panel: 0 1px 2px rgb(26 25 23 / 0.06), 0 8px 24px -12px rgb(26 25 23 / 0.22);
+
+  /* Movimiento */
+  --ch-duracion-rapida: 120ms;
+  --ch-duracion-media: 220ms;
+  --ch-curva: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ch-lienzo: #15181b;
+    --ch-superficie: #1f2428;
+    --ch-superficie-alt: #282e33;
+    --ch-tinta: #f2f1ee;
+    --ch-tinta-suave: #c3c1ba;
+    --ch-borde: #3c4348;
+    --ch-borde-fuerte: #6d757a;
+
+    --ch-accion: #5cc4a2;
+    --ch-accion-hover: #7ad4b7;
+    --ch-accion-tinta: #0a1c16;
+    --ch-accion-suave: #1d322b;
+
+    --ch-exito: #74e3a6;
+    --ch-exito-fondo: #17301f;
+    --ch-aviso: #f0c469;
+    --ch-aviso-fondo: #33270f;
+    --ch-error: #ff9f96;
+    --ch-error-fondo: #38201d;
+    --ch-info: #9dc0ff;
+    --ch-info-fondo: #1a2540;
+
+    --ch-foco: #ffd166;
+    --ch-foco-contorno: #15181b;
+
+    --ch-sombra-panel: 0 1px 2px rgb(0 0 0 / 0.5), 0 10px 28px -14px rgb(0 0 0 / 0.7);
+  }
+}

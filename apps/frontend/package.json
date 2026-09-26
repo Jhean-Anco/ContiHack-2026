@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "tipos": "tsc --noEmit",
+    "prueba:humo": "tsc -p pruebas/tsconfig.humo.json && node pruebas/humo-flujo.mjs"
   },
   "dependencies": {
     "next": "^16.0.0",

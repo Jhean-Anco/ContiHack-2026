@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "../.humo-build",
+    "rootDir": "../src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2022",
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "../src",
+    "paths": { "@/*": ["*"] }
+  },
+  "include": [
+    "../src/servicios/contratos.ts",
+    "../src/servicios/validacion.ts",
+    "../src/servicios/datosProvisionales.ts",
+    "../src/flujo/maquinaUI.ts"
+  ]
+}
