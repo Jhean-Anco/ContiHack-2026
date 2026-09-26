@@ -1,0 +1,12 @@
+{
+  "name": "contihack-2026",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "docker compose up --build",
+    "dev:detached": "docker compose up -d --build",
+    "stop": "docker compose down",
+    "logs": "docker compose logs -f",
+    "db:logs": "docker compose logs -f db"
+  }
+}

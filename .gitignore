@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Builds y cachés
+.next/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Variables locales
+.env
+.env.*
+!.env.example
+
+# Cliente Prisma generado
+apps/backend/generated/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
