@@ -22,7 +22,7 @@ Lo implementado es una interfaz con contenido de ejemplo rotulado. No está prob
 | `/jugar` → feedback | Explicación, criterio y siguiente oportunidad; toma el foco. | Implementada; el veredicto viene del servidor. |
 | `/jugar` → pausa/ayuda | Pausa sin penalización y pista con su origen. | Implementadas como diálogos modales. |
 | `/jugar` → cierre | Resumen narrativo sin calificación, con nota sobre XP. | Implementada. |
-| `/jugar` → carga y error | Informar de fallos de red o contenido sin detalle técnico. | Implementados, con reintento, cambio de grado y salida. |
+| `/jugar` → carga, vacío y error | Informar de fallos de red, catálogo sin misión publicada y errores de contenido, sin detalle técnico. | Implementados, con reintento, cambio de grado y salida. |
 | `/salud` | Página técnica del scaffold: salud de API y base de datos. | Conservada, movida desde la raíz. |
 
 ## Casos transversales
@@ -33,4 +33,10 @@ Pendientes: prueba real con lector de pantalla y con teclado en varios navegador
 
 ## Evidencia y estado
 
-Verificación registrada del flujo: `npm run tipos`, `npm run lint`, `npm run build` y `npm run prueba:humo` en `apps/frontend`, todos en verde el 26-09-2026. La prueba de humo recorre entrada → cierre con intento fallido, pista y reintento, y comprueba las cinco variantes y el rechazo de contenido mal formado; no cubre render, teclado ni lectores. No hay prototipos probados con estudiantes ni auditoría de accesibilidad.
+Verificación registrada del flujo, el 26-09-2026 y toda en verde:
+
+- `npm run tipos`, `npm run lint`, `npm run build` y `npm run prueba:humo` en `apps/frontend`. La prueba de humo recorre entrada → cierre con intento fallido, pista y reintento, y comprueba las cinco variantes y el rechazo de contenido mal formado.
+- Stack completo levantado con `docker compose up -d --build`: PostgreSQL, API Nest y Next respondiendo; `/`, `/jugar` y `/salud` devuelven 200.
+- Contrato real comprobado contra el backend en ejecución: manifiesto y misión de los cinco grados pasan los validadores de la interfaz, el servidor distingue veredicto con evidencia de evidencia insuficiente en los dos retos, la pista llega con su origen declarado y un grado fuera de rango produce un mensaje apto para pantalla, sin detalle técnico.
+
+Lo anterior verifica transporte, tipos y navegación. No cubre render en navegador, teclado, lector de pantalla, contraste medido ni ampliación, y no hay prototipos probados con estudiantes ni auditoría de accesibilidad.

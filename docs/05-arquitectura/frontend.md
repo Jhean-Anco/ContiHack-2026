@@ -28,4 +28,4 @@ Todo dato externo se estrecha en `servicios/validacion.ts` antes de renderizarse
 
 ## Verificación disponible
 
-En `apps/frontend`: `npm run tipos`, `npm run lint`, `npm run build` y `npm run prueba:humo`. La prueba de humo compila los módulos de flujo y datos con el TypeScript del proyecto y recorre el flujo completo en Node, sin añadir dependencias; no cubre render, teclado ni lectores de pantalla. No hay pruebas de componentes ni runner configurado.
+En `apps/frontend`: `npm run tipos`, `npm run lint`, `npm run build` y `npm run prueba:humo`. Con el stack levantado, el contrato real se comprobó ejecutando `clienteHttp` contra el API para los cinco grados; el detalle está en [flujos y pantallas](../04-ux-ui/flujos-pantallas.md). La prueba de humo compila los módulos de flujo y datos con el TypeScript del proyecto y recorre el flujo completo en Node, sin añadir dependencias; no cubre render, teclado ni lectores de pantalla. No hay pruebas de componentes ni runner configurado.
